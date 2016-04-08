@@ -7,5 +7,5 @@ Similar to MEAN stack based website, this template uses Tingodb. TingoDB is an e
 To copy this template to your project, go to your project directory then run the following:
 
 ```shell
-git archive --remote git@bsggitlab:530594/neat.git --prefix=mynewrepo/ --format=tar HEAD | tar xf -
+git archive --remote git@bsggitlab:530594/neat.git --format=tar HEAD | tar xf -
 ```
