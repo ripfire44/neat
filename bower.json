@@ -1,6 +1,7 @@
 {
   "name": "neat",
   "description": "NEAT Starter Template",
+  "version": "0.1.0",
   "private": true,
   "ignore": [
     "**/.*",
