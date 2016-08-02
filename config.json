@@ -1,0 +1,17 @@
+{
+	"Debug": {
+		"Keys": {
+			"GoogleApiKey": "abc123"
+		}
+	},
+	"bowerFiles": {
+		"js": [
+			"/angular/angular.min.js"
+		],
+		"css": [
+		],
+		"other": [
+			
+		]
+	}
+}
