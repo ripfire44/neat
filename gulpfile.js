@@ -64,20 +64,26 @@ gulp.task('compileWatch', ['compile'], function() {
 	gulp.watch(['./source/index.ejs'], ['compileIndex']);
 });
 
+// Set application port
+var port = 5000;
+
 // Combine browser sync with nodemon to detect any changes in code
 gulp.task('browserSync', ['nodemon'], function() {
 	browserSync.init(null, {
-		proxy: "http://localhost:5000", //match port with app listen
+		proxy: "http://localhost:" + port, //match port with app listen
 		files: ["public/**/*.*"], // Reload browser sync on any file change in public
 		browser: "google chrome", // use chrome as the default browser
-		port: 7000,
+		port: 7000, 
 	});
 });
 // Nodemon will detect any changes to app.js and rerun server to apply changes
 gulp.task('nodemon', function(cb) {
 	var started = false;
 	return nodemon({
-		script: 'app.js'
+		script: 'app.js',
+		env: {
+			PORT: port
+		}
 	}).on('start', function() {
 		// to avoid nodemon being started multiple times
 		// thanks @matthisk

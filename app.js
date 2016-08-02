@@ -6,7 +6,6 @@ var app = express();
 var path = require('path');
 
 var publicDir = path.join(__dirname, 'public');
-var port = 5000;
 
 // Setup REST API
 var routeCustomer = require(path.join(__dirname, 'routes/customer'));
@@ -20,4 +19,4 @@ app.all('/*', function(req, res) {
 });
 
 
-app.listen(port);
+app.listen(process.env.PORT);
